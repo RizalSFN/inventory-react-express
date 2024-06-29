@@ -21,4 +21,4 @@ const validateProduct = [
   body("stock").notEmpty().withMessage("Stock is required"),
 ];
 
-module.exports = validateProduct;
+module.exports = { validateProduct };
