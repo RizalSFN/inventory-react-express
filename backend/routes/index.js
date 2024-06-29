@@ -10,19 +10,8 @@ const { validateRegister, validateLogin } = require("../utils/validators/auth");
 router.post("/register", validateRegister, RegisterController.register);
 router.post("/login", validateLogin, LoginController.login);
 router.get("/products", verifyToken, ProductController.getAllProducts);
-router.get("/products/:id", verifyToken, ProductController.getProductById);
-router.post(
-  "/products",
-  verifyToken,
-  validateProduct,
-  ProductController.createProduct
-);
-router.put(
-  "/products/:id",
-  verifyToken,
-  validateProduct,
-  ProductController.updateProduct
-);
+router.post("/products", verifyToken, validateProduct, ProductController.createProduct);
+router.get('/products/:id', verifyToken, ProductController.getProductById);
 router.delete("/products/:id", verifyToken, ProductController.deleteProduct);
 
 module.exports = router;
