@@ -2,7 +2,7 @@ import React from "react";
 
 export default function NavbarMenu() {
   return (
-    <div className="border border-black bg-gray-800 px-5 py-3">
+    <div className="bg-gray-800 px-5 py-3">
       <div className="flex justify-between text-white">
         <div className="flex items-center">
           <i className="bi bi-person-circle text-2xl mr-5"></i>
