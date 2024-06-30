@@ -8,6 +8,7 @@ export default function Layout({ children }) {
       <SidebarMenu />
       <div className="flex flex-col w-full">
         <NavbarMenu />
+        {children}
       </div>
     </div>
   );
